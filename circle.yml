@@ -18,7 +18,7 @@ dependencies:
   override:
     - wget -qO- $DX_CLI_URL | tar xJf -
     - ./sfdx/install
-    - mkdir tmp
+    - mkdir key
     - echo 'make hub key'
     - echo $HUB_SERVER_KEY_HEX | xxd -r -ps >> keys/hub.key
     - openssl rsa -in keys/hub.key -check -noout
